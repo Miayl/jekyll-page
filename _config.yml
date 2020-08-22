@@ -2,4 +2,9 @@ title: Jekyll page test
 description: Just random stuff
 show_downloads: true
 google_analytics:
+
+# Build settings
+markdown: kramdown
 theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
