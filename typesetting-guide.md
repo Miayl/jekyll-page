@@ -260,15 +260,15 @@ The square sets the start position while the circle sets the end position:
 
 TODO desc
 
-### Text grows / shrinks
+### Growing / shrinking
 
 [Transformations](#transformations)
 
-### Text changes color
+### Changing colors
 
 [Transformations](#transformations)
 
-### Text appears from left to right / right to left
+### Appearing from left to right / right to left
 
 [Transformations](#transformations)
 
