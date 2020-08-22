@@ -10,7 +10,7 @@ You want to learn how to typeset? ~~Poor soul.~~
 
 I've compiled some tips and tricks to typesetting with code and visual examples. There are 3 main sections:
 
-**Basic tags** Most common tags for manipulating text
+**Basic tags** Most common tags for manipulating text. There are more but I just cover the ones I usually use.
 
 **Shapes and clippings** How to draw boxes, circles and more
 
@@ -37,6 +37,8 @@ Focused on typesetting for anime, also with some really useful scripts
 ---
 
 ## Basic tags
+
+All tags are defined within curly brackets, for example `{\fn80}`. You can define multiple tags within a single pair of curly brackets, e.g. `{\fn80\pos(10,20)\blur1}`.
 
 - [Colors](#colors)
 - [Border, shadow, bold, italic, fonts](#border-shadow-bold-italic-fonts)
@@ -191,13 +193,39 @@ Select your line and jump with the video to the frame where the caption is fully
 
 ### Opacity
 
+![](./images/t_simple_alpha.png)
+
+`Full {\alphaH&80&}half {\alphaH&FF&}invisible`
+
+`\alpha` uses hexadecimal numbers to specify the opacity. It ranges from H&00& (fully visible) to H&FF& (invisible). 
+
+- `\a1` Primary text opacity
+- `\a3` Border opacity
+- `\a4` Shadow opacity
+
 [Basic tags](#basic-tags)
 
 ### Clipping
 
+#### Rectangle clips
+
+#### Vectorial clips
+
 [Basic tags](#basic-tags)
 
 ### Movement
+
+`{\move(285,164,573,174,50,709)}This line moves from left to right`
+
+Syntax: `\move(x1,y1,x2,y2,start,end)`
+
+Using the example from above, the line moves from (285,164) starting from 50ms to (573,174) until 709ms. You can also leave out start and end time (`\move(x1,y1,x2,y2)`). The line will move then the entire duration. You can also use this button:
+
+![](./images/t_move.png)
+
+The square sets the start position while the circle sets the end position:
+
+![](./images/t_move_screen.png)
 
 [Basic tags](#basic-tags)
 
@@ -207,7 +235,7 @@ Select your line and jump with the video to the frame where the caption is fully
 
 `{\c&HCD302A&\fs60\shad2\bord2\blur2}Very fancy text {\r}and now it's normal`
 
-`\r` resets everything to the default settings of the style
+`\r` resets everything to the default settings of the style or even change to a different style in a line. For example if you have a style named `Another Style`, you can change to it by writing `\rAnother Style`. Please note that this still resets every previous tags.
 
 [Basic tags](#basic-tags)
 
