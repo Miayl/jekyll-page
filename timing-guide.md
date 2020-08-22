@@ -89,6 +89,7 @@ A window opens where you can select the caption on screen and then the line is a
 
 - You can quickly skip through a video with *SHIFT + ⇦ / ⇨*
 - You can quickly adjust the timing of two following lines without gaps by selecting them, doing a *right click* and then choose one of those:
+
 ![](./images/continuous_timing.png)
 
 [top](#table-of-contents)
