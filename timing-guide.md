@@ -23,6 +23,7 @@ Arrow keys:
 These buttons: 
 
 ![](./images/frame_buttons.png)
+
 1. Go to start of line (Default shortcut: CTRL + 1)
 2. Go to end of line (Default shortcut: CTRL + 2)
 3. **Set start time to current frame (Default shortcut: CTRL + 3)**
@@ -42,10 +43,10 @@ Turn off the auto button:
 
 I recommend to use the shortcuts for faster timing!
 
-1. Click on a line you want to time
-2. Go forward with ⇨ and backward with ⇦ to go to the desired video position
-3. Set the start time of the line with button nr. 3 to that video position (use button nr. 4 to set the end time)
-4. Go to the next line by pressing *ENTER* or *G*
+a) Click on a line you want to time
+b) Go forward with ⇨ and backward with ⇦ to go to the desired video position
+c) Set the start time of the line with button nr. 3 to that video position (use button nr. 4 to set the end time)
+d) Go to the next line by pressing *ENTER* or *G*
 
 You can quickly check with button nr. 1 and nr. 2 if you have timed your line correctly.
 
