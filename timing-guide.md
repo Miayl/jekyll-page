@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Timing guide
+title: Timing Guide
 description: Basics to timing & tips
 ---
 
@@ -70,5 +70,7 @@ You can quickly check with button nr. 1 and nr. 2 if you have timed your line co
 ## General tips
 
 - You can quickly skip through a video with *SHIFT + ⇦ / ⇨*
+- You can quickly adjust the timing of two following lines without gaps by selecting them, doing a *right click* and then choose one of those:
+![](./images/continuous_timing.png)
 
 [top](#table-of-contents)
