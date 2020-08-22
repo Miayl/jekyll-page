@@ -1,17 +1,28 @@
 ---
 layout: default
 title: Typesetting Guide
-description: Basics to typesetting with examples
+description: Basics to typesetting in Aegsiub with examples
 ---
 
-[• back](./) [• Timing guide](./timing-guide.html)
+[• Home](./) [• Timing Guide](./timing-guide.html)
+
+You want to learn how to typeset? ~~Poor soul.~~
+
+I've compiled some tips and tricks to typesetting with code and visual examples. There are 3 main sections:
+
+**Basic tags** Most common tags for manipulating text
+
+**Shapes and clippings** How to draw boxes, circles and more
+
+**Transformations** This involves the `\t`tag and lets you animate stuff, such as a text changing from blue to red or changing its size
 
 ## Table of contents 
 
 1. [Useful sites](#useful-sites)
-2. [Level 1: Basic tags](#level-1-basic-tags)
-3. [Level 2: Transformations](#level-2-transformations)
-4. [Recommended scripts](#recommended-scripts)
+2. [Basic tags](#basic-tags)
+3. [Shapes and clippings](#shapes-and-clippings)
+4. [Transformations](#transformations)
+5. [Recommended scripts](#recommended-scripts)
 
 ## Useful sites
 
@@ -25,7 +36,7 @@ Focused on typesetting for anime, also with some really useful scripts
 
 ---
 
-## Level 1: Basic tags
+## Basic tags
 
 - [Colors](#colors)
 - [Border, shadow, bold, italic, fonts](#border-shadow-bold-italic-fonts)
@@ -63,7 +74,7 @@ A window opens where you can select a color (use the pipette symbol to pick a co
 
 Tip: Quickly change to white in the editor by typing *\c*
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Border, shadow, bold, italic, fonts
 
@@ -95,13 +106,17 @@ There's also `\xshad`and `\yshad` for further manipulation.
 
 `This was Candara {\fnArial} and now it's Arial`
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Size
+
+#### \fn
 
 ![](./images/t_fs.png)
 
 `{\fs30}Small text {\fs100}big text`
+
+#### \fscx, \fscy
 
 ![](./images/t_fsc.png)
 
@@ -113,9 +128,11 @@ Or this button for `\fscx` `\fscy`:
 
 100 is the default size for `\fscx` `\fscy`
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Position
+
+#### \pos
 
 `{\pos(412.322,286)}This is a text`
 
@@ -127,11 +144,13 @@ A little box appears next to the text which you can drag to change its position:
 
 ![](./images/t_pos_drag.png)
 
+#### \an
+
 You can also anchor the text to different video positions by using `\an` and the numbers 1 - 9:
 
 ![](./images/t_an.png)
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Blur
 
@@ -139,7 +158,7 @@ You can also anchor the text to different video positions by using `\an` and the
 
 `{\shad4\bord4}normal {\blur10}everything {\blur0\be10}or just the edges`
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Line breaks and spacing
 
@@ -152,7 +171,7 @@ You can also anchor the text to different video positions by using `\an` and the
 - `\fsp` Space between letters, default is 1
 - `\q` Mode for line wrapping, `\q2` is no automatic line wrapping
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Fade in and out
 
@@ -166,21 +185,21 @@ Below the video player there are these numbers:
 
 ![](./images/t_fade.png)
 
-Select your line and jump with the video to the frame where the caption is fully seen. The + number (left) is your fade-in time. For fade out, jump to the one frame before the caption starts to fade out. The - number (right) is your fade-out time.
+Select your line and jump with the video to the frame where the caption is fully seen. The + number (left) is your fade-in time. For fade out, jump to one frame before the caption starts to fade out. The - number (right) is your fade-out time.
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Opacity
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Clipping
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Movement
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 ### Reset everything
 
@@ -190,12 +209,22 @@ Select your line and jump with the video to the frame where the caption is fully
 
 `\r` resets everything to the default settings of the style
 
-[Level 1: Basic tags](#level-1-basic-tags)
+[Basic tags](#basic-tags)
 
 
 ---
 
-## Level 2: Transformations
+## Shapes and clippings
+
+[Shapes and clippings](#shapes-and-clippings)
+
+### Box with text
+
+[Shapes and clippings](#shapes-and-clippings)
+
+---
+
+## Transformations
 
 [top](#table-of-contents)
 
@@ -205,19 +234,15 @@ TODO desc
 
 ### Text grows / shrinks
 
-[Level 2: Transformations](#level-2-transformations)
+[Transformations](#transformations)
 
 ### Text changes color
 
-[Level 2: Transformations](#level-2-transformations)
+[Transformations](#transformations)
 
 ### Text appears from left to right / right to left
 
-[Level 2: Transformations](#level-2-transformations)
-
-### Box with text
-
-[Level 2: Transformations](#level-2-transformations)
+[Transformations](#transformations)
 
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Timing Guide
-description: Basics to timing & tips
+description: Basics to timing & tips in Aegisub
 ---
 
-[• back](./) [• Typesetting guide](./typesetting-guide.html)
+[• Home](./) [• Typesetting Guide](./typesetting-guide.html)
 
 ## Table of contents 
 1. [Important buttons](#important-buttons)
@@ -39,16 +39,33 @@ Turn off the auto button:
 
 ## Frame-based timing
 
+### With keys
+
 ![](./images/frame_buttons.png)
 
 I recommend to use the shortcuts for faster timing!
 
 a) Click on a line you want to time
+
 b) Go forward with ⇨ and backward with ⇦ to go to the desired video position
+
 c) Set the start time of the line with button nr. 3 to that video position (use button nr. 4 to set the end time)
+
 d) Go to the next line by pressing *ENTER* or *G*
 
 You can quickly check with button nr. 1 and nr. 2 if you have timed your line correctly.
+
+### Automatically by selecting the caption
+
+If you use [this Aegisub version](https://github.com/wangqr/Aegisub/releases/), you can also use this button for timing a line:
+
+![](./images/t_visual_timing.png)
+
+A window opens where you can select the caption on screen and then the line is automatically timed.
+
+![](./images/t_visual_timing_window.png)
+
+**Be careful!** Using this function can be quite performance heavy! The longer the caption appears, the longer it takes (and Aegisub may crash or stop responding, oops). And the caption has to be static to time it correctly. So no movement, no fade, just a static caption.
 
 [top](#table-of-contents)
 
