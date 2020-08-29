@@ -48,6 +48,7 @@ All tags are defined within curly brackets, for example `{\fn80}`. You can defin
 - [Line breaks and spacing](#line-breaks-and-spacing)
 - [Fade in and out](#fade-in-and-out)
 - [Opacity](#opacity)
+- [Rotation](#rotation)
 - [Clipping](#clipping)
 - [Movement](#movement)
 - [Reset everything](#reset-everything)
@@ -205,11 +206,59 @@ Select your line and jump with the video to the frame where the caption is fully
 
 [Basic tags](#basic-tags)
 
+### Rotation
+
+#### \frz
+
+![](./images/t_rot_ex.png)
+
+`{\frz45}Rotated by 45 degrees`
+
+With `\frz` you can rotate a line by * degrees. You can also use negative numbers.
+
+#### \frx, \fry
+
+![](./images/t_rot_ex2.png)
+
+`{\frx6\fry308}Rotated with \frx and \fry`
+
+With `\frx` and `\fry` you can do 3d-like transformations.
+
+You can also rotate with this button (`\frz`) and the button (`\frx` `\fry`) below:
+
+![](./images/t_rot.png)
+
+[Basic tags](#basic-tags)
+
 ### Clipping
 
 #### Rectangle clips
 
+![](./images/t_clip_rect.png)
+
+`{\clip(354.054,188.444,480.375,302.222)}Clipping example`
+
+Format: 
+
+`\clip(x_start, y_start, x_end, y_end)`
+
+Or this button at the left:
+
+![](./images/t_clip_button.png)
+
+With `\clip` you can set a zone where your line can be seen. If you use `\iclip`, you do the reverse: a zone where the line *can't* be seen.
+
 #### Vectorial clips
+
+![](./images/t_clip_vec.png)
+
+`{\clip(m 361 160 l 290 376 387 328 515 170 361 190 565 261 585 232)}Clipping example`
+
+Using this button:
+
+![](./images/t_clip_vec_button.png)
+
+Allows you to draw non-rectangle clips. Please note that only rectangle clips can be combined with the transformation tag `\t`
 
 [Basic tags](#basic-tags)
 
@@ -239,20 +288,63 @@ The square sets the start position while the circle sets the end position:
 
 [Basic tags](#basic-tags)
 
-
 ---
 
 ## Shapes and clippings
 
-[Shapes and clippings](#shapes-and-clippings)
+* [Simple shapes](#simple-shades)
+* [Box with text](#box-with-text)
+
+[top](#table-of-contents)
+
+### Simple shapes
+
+The `\p1` tag marks drawings like these:
+
+![](./images/t_shapes.png)
+
+Square: 
+
+```
+{\an5\bord0\shad0\blur1\pos(640,360)\p1}m 0 0 l 100 0 100 100 0 100
+```
+
+Circle: 
+```
+{\an7\bord0\shad0\blur1\p1\pos(293.062,329.778)}m -100 -100 b -45 -155 45 -155 100 -100 b 155 -45 155 45 100 100 b 46 155 -45 155 -100 100 b -155 45 -155 -45 -100 -100
+```
+
+Triangle: 
+```
+{\an7\bord0\shad0\blur1\p1\pos(590.183,178.667)}m -122 70 l 122 70 l 0 -141
+```
+
+With this button:
+
+![](./images/t_ass_draw.png)
+
+An editor opens where you can draw some shapes which gives you the code for inserting it into Aegisub.
 
 ### Box with text
+
+Now  that we know how to make simple shapes, we can make something like text boxes since every shape can be manipulated with any tags.
+
+![](./images/t_text_box.png)
+
+```
+Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\bord0\shad0\blur1\p1\fscx500\pos(451.408,345.778)}m 0 0 l 100 0 100 100 0 100
+Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\c&HFFFFFF&\pos(451.908,344.889)}I have text
+```
 
 [Shapes and clippings](#shapes-and-clippings)
 
 ---
 
 ## Transformations
+
+* [Growing / shrinking](#growing-shrinking)
+* [Changing colors](#changing-colors)
+* [Appearing from left right / right to left](#appearing-from-left-to-right-right-to-left)
 
 [top](#table-of-contents)
 

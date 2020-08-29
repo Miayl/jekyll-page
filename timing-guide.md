@@ -16,7 +16,7 @@ description: Basics to timing & tips in Aegisub
 
 ## Important buttons
 
-Arrow keys: 
+Keyboard arrow keys: 
 
 ⇦ ⇨
 
@@ -47,7 +47,7 @@ I recommend to use the shortcuts for faster timing!
 
 a) Click on a line you want to time
 
-b) Go forward with ⇨ and backward with ⇦ to go to the desired video position
+b) Go forward with ⇨ and backward with ⇦ on your keyboard to go to the desired video position
 
 c) Set the start time of the line with button nr. 3 to that video position (use button nr. 4 to set the end time)
 
@@ -91,5 +91,7 @@ A window opens where you can select the caption on screen and then the line is a
 - You can quickly adjust the timing of two following lines without gaps by selecting them, doing a *right click* and then choose one of those:
 
 ![](./images/continuous_timing.png)
+
+- If you have many lines, you can copy them all at once and paste them into the line grid
 
 [top](#table-of-contents)
