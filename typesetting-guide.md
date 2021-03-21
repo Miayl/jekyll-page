@@ -10,7 +10,7 @@ description: Basics to typesetting in Aegsiub with examples
 
 You want to learn how to typeset? ~~Poor soul.~~
 
-I've compiled some tips and tricks to typesetting with code and visual examples. There are 3 main sections:
+I've compiled some tips and tricks to typesetting with code and visual examples. There are 4 main sections:
 
 **Basic tags** Most common tags for manipulating text. There are more but I just cover the ones I usually use.
 
@@ -18,7 +18,11 @@ I've compiled some tips and tricks to typesetting with code and visual examples.
 
 **Transformations** This involves the `\t`tag and lets you animate stuff, such as a text changing from blue to red or changing its size
 
-## Table of contents 
+**Recommend scripts** Scripts to make your typesetter life easier
+
+[Here](https://github.com/Miayl/jekyll-page/blob/gh-pages/aegifiles/guide.ass) is an aegisub files with most examples which were covered in this guide.
+
+## Table of contents
 
 1. [Useful sites](#useful-sites)
 2. [Basic tags](#basic-tags)
@@ -27,6 +31,12 @@ I've compiled some tips and tricks to typesetting with code and visual examples.
 5. [Recommended scripts](#recommended-scripts)
 
 ## Useful sites
+
+[Official Aegisub](https://github.com/Aegisub/Aegisub/releases)
+You will need this for typesetting.
+
+[Aegisub fork](https://github.com/wangqr/Aegisub/releases)
+The development of the original Aegisub stopped in 2014 (apart from some developer releases here and there). In this fork, Aegisub was further developed with some new functions.
 
 [Aegisub tags](http://docs.aegisub.org/3.2/ASS_Tags/)
 Official documentation for all available tags in Aegisub, e.g. \fad, \t
@@ -198,9 +208,11 @@ Select your line and jump with the video to the frame where the caption is fully
 
 ![](./images/t_simple_alpha.png)
 
-`Full {\alphaH&80&}half {\alphaH&FF&}invisible`
+```
+Full {\alphaH&80&}half {\alphaH&FF&}invisible
+```
 
-`\alpha` uses hexadecimal numbers to specify the opacity. It ranges from H&00& (fully visible) to H&FF& (invisible). 
+`\alpha` uses hexadecimal numbers to specify the opacity. It ranges from H&00& (fully visible) to H&FF& (invisible).
 
 - `\a1` Primary text opacity
 - `\a3` Border opacity
@@ -260,7 +272,7 @@ Using this button:
 
 ![](./images/t_clip_vec_button.png)
 
-Allows you to draw non-rectangle clips. Please note that only rectangle clips can be combined with the transformation tag `\t`
+Allows you to draw non-rectangle clips. Please note that only rectangle clips can be combined with the transformation tag `\t`.
 
 [Basic tags](#basic-tags)
 
@@ -350,24 +362,166 @@ Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\c&HFFFFFF&\pos(451.908,344.8
 
 [top](#table-of-contents)
 
+The `\t` tag allows us to add all kind of animations to our lines. The most common syntax are:
+
+- `\t(tags)` applies the given tags for the entire duration of the line. For example `\fs50\t(\fs80\blur10)` would gradually increase the font size from 50 to 80 and make the text blurry.
+- `\t(start,end,tags)` With this, you can decide when a transformation should start and when it should end (for example a blinking text). `\shad0\t(500,end,\shad4)` makes the shadow stronger starting from 500ms until the end of the line, while with `\shad0\t(500,800,\shad4)` the shadow growth would stop at 800ms.
+
+To get the correct start and end times, select your line and move to the video position where the effect should start or stop.
+
 ![](./images/t_fade.png)
 
-TODO desc
+Use the number with the + mark (in this image 250ms).
 
 ### Growing / shrinking
+
+![](./images/gifs/growth.gif)
+
+```
+{\fs20\t(19,1000,\fs80)}Hello, I grow
+```
+To make the text shrink, just reverse the `\fs` tags.
 
 [Transformations](#transformations)
 
 ### Changing colors
 
+![](./images/gifs/gradient.gif)
+
+```
+{\t(start,1000,\cH&00FFFF&)}From black to yellow
+```
+
+![](./images/gifs/blink.gif)
+
+```
+{\cH&FFFFFF&\t(100,100,\c&H0000FF&)\t(300,300,\c&HFFFFFF&)\t(600,600,\c&H0000FF&)\t(900,900,\c&HFFFFFF&)\t(1200,1200,\c&0000FF&)}I blink a lot
+```
+
 [Transformations](#transformations)
 
 ### Appearing from left to right / right to left
+
+Would love to add a .gif for this one but my recording program has trouble with recording it.
+
+```
+{\clip(118.493,196.267,149.45,291.2)\t(\clip(118.493,196.267,749.45,291.2)}I suddenly appear and spook you
+```
 
 [Transformations](#transformations)
 
 ---
 
 ## Recommended scripts
+
+Instead of putting all of your sweat and blood into typesetting the most complex effects, why not using some scripts which can make your life easier? In this section I will introduce some scripts which I like to use and which can speed up your typesetting.
+
+- [How to add scripts](#how-to-add-scripts)
+- [HYDRA](#hydra-by-unanimated)
+- [Masquerade](#masquerade-by-unanimated)
+- [Hyperdimensional Relocator](#hyperdimensional-relocator-by-unanimated)
+- [GradientEverything](#gradienteverything-by-lyger)
+- [Aegisub-Motion](#aegisub-motion)
+
+### How to add scripts
+
+You have to put all scripts into the `automation/autoload` folder where you installed Aegisub.
+
+For some scripts, you might need to add [DependencyControl](https://github.com/TypesettingTools/DependencyControl) and all its requirements to be able to use the scripts. Those required scripts have to be put into the `automation/include` folder. Example:
+
+![](./images/automation_include.png)
+
+### HYDRA by unanimated
+
+If you are still unfamiliar with tags or want to set tags for multiple lines at once, you can use this script to easily add tags to lines. There are three different views: The basic one, medium and full. In most cases, the basic or the medium view should be enough.
+
+![](./images/script_hydra.png)
+
+It also adds an useful non-gui macro to the automation menu for commenting lines via hotkeys:
+
+![](./images/script_hydra_comment.png)
+
+[Download](https://github.com/unanimated/luaegisub/blob/master/ua.HYDRA.lua) | [Manual](https://unanimated.github.io/ts/scripts-manuals.htm#hydra)
+
+### Masquerade by unanimated
+
+While this one has many more functions, I mainly use this one in combination with `\clip` and the `Mask: from clip` option to get shapes.
+
+First I draw a shape with `\clip`:
+
+![](./images/masquerade_step1.png)
+
+Then I set Mask to `from clip` and click on the Masquerade button.
+
+![](./images/script_masquerade.png)
+
+Voilà:
+
+![](./images/masquerade_step2.png)
+
+And the code which was generated:
+
+```
+{\an7\blur1\bord0\shad0\fscx100\fscy100\pos(0,0)\p1}m 175 119 l 359 117 560 182 456 341 167 311
+```
+
+[Download](https://github.com/unanimated/luaegisub/blob/master/ua.Masquerade.lua) | [Manual](https://unanimated.github.io/ts/scripts-manuals.htm#masquerade)
+
+### Hyperdimensional Relocator by unanimated
+
+Actually I only use this one for the following macros it adds for re-positioning lines:
+
+![](./images/script_relocator.png)
+
+Though some of the other functions can be quite useful too.
+
+[Download](https://github.com/unanimated/luaegisub/blob/master/ua.Relocator.lua) | [Manual](https://unanimated.github.io/ts/scripts-manuals.htm#relocator)
+
+### GradientEverything by lyger
+
+This one is great for adding all kinds of gradients. A basic use could be a line which starts black and then fades to red. First, you add a black and a red line:
+
+```
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\pos(427,241.067)}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\c&H2908F0&\pos(427,241.067)}Gradient Example
+```
+
+Then, you add a clip box to one of the lines:
+
+![](./images/gradient1.png)
+
+Now select all lines which should be used for the gradient and open GradientEverything. I just want to gradient the main color, so I check the `\c` box and choose *horizontal* (there's also vertical) before pressing *OK*. With * Pixels per strip* you can adjust how granularity of the gradient.
+
+![](./images/gradient2.png)
+
+This is the result:
+![](./images/gradient3.png)
+
+Make sure to move your text to the right position first before adding a gradient to it.
+
+[Download](https://github.com/TypesettingTools/lyger-Aegisub-Scripts/blob/master/macros/lyger.GradientEverything.moon)
+(Needs [DependencyControl](https://github.com/TypesettingTools/DependencyControl) and [LibLyger](https://github.com/TypesettingTools/lyger-Aegisub-Scripts/blob/master/modules/LibLyger.moon))
+
+### Aegisub-Motion
+
+No matter how much you try to adjust `\move`, some captions move in a non-constant way, making it really difficult to capture the caption's movement in one line. So to be able to move your lines as beautiful as the original captions, you use motion tracking software like Mocha Pro or Blender which support After Effect keyframe data which can be applied to your lines. I won't cover how to use motion tracking software.
+
+First, you need to download x264 or [ffmpeg](https://ffmpeg.org/download.html) and add its path to the trim settings:
+
+![](./images/motion1.png)
+
+I would recommend to use x264. Ffmpeg needs a custom encoding command (which I tried to google and didn't work) and is slower.
+
+Then basically you select the line(s) you want to add motion tracking to and use `Aegisub-Motion/Trim` which exports the video cut to the length of your line. You can load this snippet into your motion tracking software of choice, track your line and copy the resulting After Effect keyframe data.
+
+Back to Aegisub and with your line(s) still selected, you use `Aegisub-Motion/Apply`, paste your data into the box and then check all tags the motion data should be applied to before pressing *Go*.
+
+![](./images/motion2.png)
+
+This will split out a lot of lines, usually one for each frame.
+
+
+[Download](https://github.com/TypesettingTools/Aegisub-Motion)
+(Needs [DependencyControl](https://github.com/TypesettingTools/DependencyControl))
 
 [top](#table-of-contents)

@@ -13,9 +13,10 @@ YCbCr Matrix: None
 Last Style Storage: Default
 Video File: ?dummy:23.976000:40000:1280:720:187:187:187:
 Video AR Value: 1.777778
-Video Zoom Percent: 0.375000
-Active Line: 9
-Video Position: 312
+Video Zoom Percent: 0.625000
+Scroll Position: 72
+Active Line: 85
+Video Position: 695
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -26,6 +27,7 @@ Style: unten,Candara,46,&H00FBA80F,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\an5\bord0\shad0\blur1\p1\c&H3CFFFD&\fscx1000\pos(421.163,400)}m 0 0 l 100 0 100 100 0 100
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\pos(430.203,348.8)}Full {\alphaH&80&}half {\alphaH&FF&}invisible
 Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\move(285.556,164.667,561.772,176.667,0,0)}This line moves from left to right
 Dialogue: 0,0:00:05.00,0:00:07.00,Default,,0,0,0,,{\an5\frx6\fry308}Rotated with \frx and \fry
 Dialogue: 0,0:00:07.00,0:00:09.00,Default,,0,0,0,,{\clip(354.054,188.444,480.375,302.222)}Clipping example
@@ -37,3 +39,76 @@ Dialogue: 2,0:00:11.00,0:00:13.00,Default,,0,0,0,,{\an7\bord0\shad0\blur1\p1\pos
 Comment: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,Textbox
 Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\bord0\shad0\blur1\p1\fscx500\pos(451.408,345.778)}m 0 0 l 100 0 100 100 0 100
 Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\c&HFFFFFF&\pos(451.908,344.889)}I have text
+Comment: 0,0:00:15.00,0:00:17.00,Default,,0,0,0,,Masquerade example for crazy shapes
+Dialogue: 0,0:00:15.00,0:00:17.00,Default,,0,0,0,,{\an7\blur1\bord0\shad0\fscx100\fscy100\pos(0,0)\p1}m 175 119 l 359 117 560 182 456 341 167 311
+Comment: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,Gradient example
+Comment: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\pos(427,241.067)\clip(276.483,227.2,579.653,262.4)}Gradient Example
+Comment: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\c&H2908F0&\pos(427,241.067)}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(276,227,281,262)\pos(427,241.067)\c&H000000&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(281,227,286,262)\pos(427,241.067)\c&H000004&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(286,227,291,262)\pos(427,241.067)\c&H010008&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(291,227,296,262)\pos(427,241.067)\c&H02000C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(296,227,301,262)\pos(427,241.067)\c&H020010&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(301,227,306,262)\pos(427,241.067)\c&H030014&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(306,227,311,262)\pos(427,241.067)\c&H040018&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(311,227,316,262)\pos(427,241.067)\c&H04001C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(316,227,321,262)\pos(427,241.067)\c&H050120&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(321,227,326,262)\pos(427,241.067)\c&H060124&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(326,227,331,262)\pos(427,241.067)\c&H060128&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(331,227,336,262)\pos(427,241.067)\c&H07012C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(336,227,341,262)\pos(427,241.067)\c&H080130&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(341,227,346,262)\pos(427,241.067)\c&H080134&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(346,227,351,262)\pos(427,241.067)\c&H090138&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(351,227,356,262)\pos(427,241.067)\c&H0A023C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(356,227,361,262)\pos(427,241.067)\c&H0A0240&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(361,227,366,262)\pos(427,241.067)\c&H0B0244&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(366,227,371,262)\pos(427,241.067)\c&H0C0248&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(371,227,376,262)\pos(427,241.067)\c&H0C024C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(376,227,381,262)\pos(427,241.067)\c&H0D0250&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(381,227,386,262)\pos(427,241.067)\c&H0E0254&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(386,227,391,262)\pos(427,241.067)\c&H0F0258&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(391,227,396,262)\pos(427,241.067)\c&H0F035C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(396,227,401,262)\pos(427,241.067)\c&H100360&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(401,227,406,262)\pos(427,241.067)\c&H110364&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(406,227,411,262)\pos(427,241.067)\c&H110368&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(411,227,416,262)\pos(427,241.067)\c&H12036C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(416,227,421,262)\pos(427,241.067)\c&H130370&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(421,227,426,262)\pos(427,241.067)\c&H130374&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(426,227,431,262)\pos(427,241.067)\c&H140478&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(431,227,436,262)\pos(427,241.067)\c&H15047C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(436,227,441,262)\pos(427,241.067)\c&H150480&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(441,227,446,262)\pos(427,241.067)\c&H160484&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(446,227,451,262)\pos(427,241.067)\c&H170488&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(451,227,456,262)\pos(427,241.067)\c&H17048C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(456,227,461,262)\pos(427,241.067)\c&H180490&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(461,227,466,262)\pos(427,241.067)\c&H190494&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(466,227,471,262)\pos(427,241.067)\c&H190598&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(471,227,476,262)\pos(427,241.067)\c&H1A059C&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(476,227,481,262)\pos(427,241.067)\c&H1B05A0&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(481,227,486,262)\pos(427,241.067)\c&H1C05A4&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(486,227,491,262)\pos(427,241.067)\c&H1C05A8&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(491,227,496,262)\pos(427,241.067)\c&H1D05AC&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(496,227,501,262)\pos(427,241.067)\c&H1E05B0&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(501,227,506,262)\pos(427,241.067)\c&H1E06B4&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(506,227,511,262)\pos(427,241.067)\c&H1F06B8&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(511,227,516,262)\pos(427,241.067)\c&H2006BC&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(516,227,521,262)\pos(427,241.067)\c&H2006C0&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(521,227,526,262)\pos(427,241.067)\c&H2106C4&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(526,227,531,262)\pos(427,241.067)\c&H2206C8&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(531,227,536,262)\pos(427,241.067)\c&H2206CC&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(536,227,541,262)\pos(427,241.067)\c&H2306D0&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(541,227,546,262)\pos(427,241.067)\c&H2407D4&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(546,227,551,262)\pos(427,241.067)\c&H2407D8&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(551,227,556,262)\pos(427,241.067)\c&H2507DC&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(556,227,561,262)\pos(427,241.067)\c&H2607E0&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(561,227,566,262)\pos(427,241.067)\c&H2607E4&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(566,227,571,262)\pos(427,241.067)\c&H2707E8&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(571,227,576,262)\pos(427,241.067)\c&H2807EC&}Gradient Example
+Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(576,227,581,262)\pos(427,241.067)\c&H2908F0&}Gradient Example
+Comment: 0,0:00:19.00,0:00:21.00,Default,,0,0,0,,Growing
+Dialogue: 0,0:00:19.00,0:00:21.00,Default,,0,0,0,,{\fs20\t(19,1000,\fs80)}Hello, I grow
+Comment: 0,0:00:21.00,0:00:23.00,Default,,0,0,0,,Changing colors
+Dialogue: 0,0:00:23.00,0:00:25.00,Default,,0,0,0,,{\t(start,1000,\cH&00FFFF&)}From black to yellow
+Dialogue: 0,0:00:25.00,0:00:27.00,Default,,0,0,0,,{\cH&FFFFFF&\t(100,100,\c&H0000FF&)\t(300,300,\c&HFFFFFF&)\t(600,600,\c&H0000FF&)\t(900,900,\c&HFFFFFF&)\t(1200,1200,\c&0000FF&)}I blink a lot
+Comment: 0,0:00:27.00,0:00:29.00,Default,,0,0,0,,
+Dialogue: 0,0:00:27.00,0:00:29.00,Default,,0,0,0,,{\clip(118.493,196.267,149.45,291.2)\t(\clip(118.493,196.267,749.45,291.2)}I suddenly appear and spook you
