@@ -6,6 +6,8 @@ description: Basics to typesetting in Aegsiub with examples
 
 [• Home](./) [• Timing Guide](./timing-guide.html)
 
+*Last update*: 21.03.2021
+
 You want to learn how to typeset? ~~Poor soul.~~
 
 I've compiled some tips and tricks to typesetting with code and visual examples. There are 3 main sections:
