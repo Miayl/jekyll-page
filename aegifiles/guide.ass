@@ -15,8 +15,8 @@ Video File: ?dummy:23.976000:40000:1280:720:187:187:187:
 Video AR Value: 1.777778
 Video Zoom Percent: 0.625000
 Scroll Position: 72
-Active Line: 85
-Video Position: 695
+Active Line: 88
+Video Position: 696
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -105,10 +105,13 @@ Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(561,227,566,262)\pos(42
 Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(566,227,571,262)\pos(427,241.067)\c&H2707E8&}Gradient Example
 Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(571,227,576,262)\pos(427,241.067)\c&H2807EC&}Gradient Example
 Dialogue: 0,0:00:17.00,0:00:19.00,Default,,0,0,0,,{\clip(576,227,581,262)\pos(427,241.067)\c&H2908F0&}Gradient Example
-Comment: 0,0:00:19.00,0:00:21.00,Default,,0,0,0,,Growing
-Dialogue: 0,0:00:19.00,0:00:21.00,Default,,0,0,0,,{\fs20\t(19,1000,\fs80)}Hello, I grow
+Comment: 0,0:00:19.00,0:00:21.00,Default,,0,0,0,,Growing & shrinking
+Dialogue: 0,0:00:19.00,0:00:20.50,Default,,0,0,0,,{\fs20\t(19,1000,\fs80)}Hello, I grow
+Dialogue: 0,0:00:20.50,0:00:21.00,Default,,0,0,0,,{\fs200\t(19,1000,\fs20)}Hello, I shrink
 Comment: 0,0:00:21.00,0:00:23.00,Default,,0,0,0,,Changing colors
 Dialogue: 0,0:00:23.00,0:00:25.00,Default,,0,0,0,,{\t(start,1000,\cH&00FFFF&)}From black to yellow
 Dialogue: 0,0:00:25.00,0:00:27.00,Default,,0,0,0,,{\cH&FFFFFF&\t(100,100,\c&H0000FF&)\t(300,300,\c&HFFFFFF&)\t(600,600,\c&H0000FF&)\t(900,900,\c&HFFFFFF&)\t(1200,1200,\c&0000FF&)}I blink a lot
-Comment: 0,0:00:27.00,0:00:29.00,Default,,0,0,0,,
+Comment: 0,0:00:27.00,0:00:29.00,Default,,0,0,0,,Spook with clip
 Dialogue: 0,0:00:27.00,0:00:29.00,Default,,0,0,0,,{\clip(118.493,196.267,149.45,291.2)\t(\clip(118.493,196.267,749.45,291.2)}I suddenly appear and spook you
+Comment: 0,0:00:29.00,0:00:31.00,Default,,0,0,0,,Unblur
+Dialogue: 0,0:00:29.00,0:00:31.00,Default,,0,0,0,,{\blur20\t(0,1000,\blur0)}Suddenly gaining vision

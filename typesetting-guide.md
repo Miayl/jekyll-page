@@ -6,13 +6,17 @@ description: Basics to typesetting in Aegsiub with examples
 
 [• Home](./) [• Timing Guide](./timing-guide.html)
 
-*Last update*: 21.03.2021
+*Last update 26.03.2021*
 
-You want to learn how to typeset? ~~Poor soul.~~
+You want to learn how to typeset?
 
-I've compiled some tips and tricks to typesetting with code and visual examples. There are 4 main sections:
+I've compiled some tips and tricks to typesetting with code and visual examples. There are 6 main sections:
 
-**Basic tags** Most common tags for manipulating text. There are more but I just cover the ones I usually use.
+**Useful sites** Links which will help you to get started or if you want to find deeper information
+
+**Introduction to basic Aegisub features** Helps you with navigating through the program
+
+**Basic tags** Most common tags for manipulating text. There are more but I just cover the ones I usually use
 
 **Shapes and clippings** How to draw boxes, circles and more
 
@@ -25,6 +29,7 @@ I've compiled some tips and tricks to typesetting with code and visual examples.
 ## Table of contents
 
 1. [Useful sites](#useful-sites)
+2. [Introduction to basic Aegisub features](#introduction-to-basic-aegisub-features)
 2. [Basic tags](#basic-tags)
 3. [Shapes and clippings](#shapes-and-clippings)
 4. [Transformations](#transformations)
@@ -45,6 +50,82 @@ Official documentation for all available tags in Aegisub, e.g. \fad, \t
 Focused on typesetting for anime, also with some really useful scripts
 
 [top](#table-of-contents)
+
+---
+
+## Introduction to basic Aegisub features
+
+Let's introduce you to the most important features of Aegisub which you will need as a typesetter.
+
+- [Overview](#overview)
+- Styles Manager
+- Selecting Lines
+- [Auto save](#auto-save)
+
+### Overview
+
+So it's your first time installing and opening Aegisub. What now? There are a lot of buttons!
+
+**The video area**
+
+![](./images/overview1.png)
+
+1. Contains a style manager for setting styles and selecting multiple lines at once. A style is a definition or preset of how a line or text should look like
+2. Here you can automatically open a video. It also automatically opens its audio. Sometimes you are asked if you want to set the script resolution to the video resolution. Usually that's a good idea
+3. Here are some visual typesetting tools like moving lines or rotating them
+4. Your video and preview of your lines
+5. Play or pause video. Second play button only plays the line. The auto button automatically moves the video to the beginning of your selected line. I would recommend to turn off this function
+6. Your current video position in time (in the screenshot 0:00:30.989) and frame (in the screenshot 743)
+7. The + number tells you in ms how far you are away from the line beginning and the - number how far you are way from the line ending
+
+You can hover over video and use your scroll wheel for zooming in and out the video.
+
+**The audio and text box area**
+
+![](./images/overview2.png)
+
+1. Audio spectrum of your video
+2. First two bars are for scaling the audio spectrum. Last bar is the audio volume. Click on the green box to activate the last bar
+3. Comment or uncomment your line
+4. Use a different style for this line which is listed in the Styles Manager
+5. Which layer your line is on. Imagine you have two lines which overlap. You can move a line into the foreground my giving it a higher layer number than the other one
+6. Three time boxes: Start time, end time & duration
+7. Different rich text options: Bold, italic, underline, strikeout, fonts
+8. Four AB boxes for setting different colors: Primary, secondary (for karaoke), border and shadow color
+9. Compare your changes with a version before the changes
+10. Text box
+
+**The subtitle grid area**
+
+![](./images/overview3.png)
+
+1. This is where all your lines are
+2. Line number
+3. As the header says, start and end time, etc. CPS = characters per second
+4. lines which timings overlap are marked red
+5. The greenish line is your currently selected line
+6. Purplish line is a commented line
+7. Yellow line is where your current video is
+
+Of course you can select different line colors in the Aegisub settings!
+
+The ☀ (sun) symbol in a line means that this line contains tags. If you want to see all tags, you can select *View > Show Tags* instead of *Simplify Tags*.
+
+![](./images/menu1.png)
+
+Now your subtitle grid should look like this:
+
+![](./images/overview4.png)
+
+### Auto save
+
+Basically the first Aegisub setting you want to activate is this one:
+
+![](./images/b_autosave.png)
+
+Every time you make a change, your file gets saved.
+
+[Introduction to basic Aegisub features](#introduction-to-basic-aegisub-features) | [top](#table-of-contents)
 
 ---
 
@@ -87,7 +168,7 @@ A window opens where you can select a color (use the pipette symbol to pick a co
 
 ![](./images/t_color_picker.png)
 
-Tip: Quickly change to white in the editor by typing *\c*
+⚠️ Tip: Quickly change to white in the editor by typing *\c* (but doesn't work in combination wit the `\t` tag)
 
 [Basic tags](#basic-tags)
 
@@ -300,7 +381,7 @@ The square sets the start position while the circle sets the end position:
 
 `\r` resets everything to the default settings of the style or even change to a different style in a line. For example if you have a style named `Another Style`, you can change to it by writing `\rAnother Style`. Please note that this still resets every previous tags.
 
-[Basic tags](#basic-tags)
+[Basic tags](#basic-tags) | [top](#table-of-contents)
 
 ---
 
@@ -309,7 +390,6 @@ The square sets the start position while the circle sets the end position:
 * [Simple shapes](#simple-shades)
 * [Box with text](#box-with-text)
 
-[top](#table-of-contents)
 
 ### Simple shapes
 
@@ -323,12 +403,12 @@ Square:
 {\an5\bord0\shad0\blur1\pos(640,360)\p1}m 0 0 l 100 0 100 100 0 100
 ```
 
-Circle: 
+Circle:
 ```
 {\an7\bord0\shad0\blur1\p1\pos(293.062,329.778)}m -100 -100 b -45 -155 45 -155 100 -100 b 155 -45 155 45 100 100 b 46 155 -45 155 -100 100 b -155 45 -155 -45 -100 -100
 ```
 
-Triangle: 
+Triangle:
 ```
 {\an7\bord0\shad0\blur1\p1\pos(590.183,178.667)}m -122 70 l 122 70 l 0 -141
 ```
@@ -350,7 +430,9 @@ Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\bord0\shad0\blur1\p1\fscx500
 Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\c&HFFFFFF&\pos(451.908,344.889)}I have text
 ```
 
-[Shapes and clippings](#shapes-and-clippings)
+You can also make a box of abitrary size and just use `\clip` to adjust the size of the box. This works the best for boxes which don't need to move.
+
+[Shapes and clippings](#shapes-and-clippings) | [top](#table-of-contents)
 
 ---
 
@@ -359,8 +441,6 @@ Dialogue: 0,0:00:13.00,0:00:15.00,Default,,0,0,0,,{\c&HFFFFFF&\pos(451.908,344.8
 * [Growing / shrinking](#growing-shrinking)
 * [Changing colors](#changing-colors)
 * [Appearing from left right / right to left](#appearing-from-left-to-right-right-to-left)
-
-[top](#table-of-contents)
 
 The `\t` tag allows us to add all kind of animations to our lines. The most common syntax are:
 
@@ -380,7 +460,17 @@ Use the number with the + mark (in this image 250ms).
 ```
 {\fs20\t(19,1000,\fs80)}Hello, I grow
 ```
-To make the text shrink, just reverse the `\fs` tags.
+To make the text shrink, just reverse the `\fs` tags:
+
+![](./images/gifs/shrink.gif)
+
+```
+{\q2\fs200\t(19,1000,\fs20)}Hello, I shrink
+```
+
+I added the `\q2` tag so that Aegisub doesn't add line breaks when the text doesn't fit into the box. See the difference without the `\q2` tag:
+
+![](./images/gifs/shrink2.gif)
 
 [Transformations](#transformations)
 
@@ -402,13 +492,26 @@ To make the text shrink, just reverse the `\fs` tags.
 
 ### Appearing from left to right / right to left
 
-Would love to add a .gif for this one but my recording program has trouble with recording it.
+![](./images/gifs/spook.gif)
+(Sorry for the lag towards the end)
 
 ```
 {\clip(118.493,196.267,149.45,291.2)\t(\clip(118.493,196.267,749.45,291.2)}I suddenly appear and spook you
 ```
 
 [Transformations](#transformations)
+
+### Unblur
+
+![](./images/gifs/unblur.gif)
+
+```
+{\blur20\t(\blur0)}Suddenly gaining vision
+```
+
+To make a text blurry, reverse the `\blur` tags.
+
+[Transformations](#transformations) | [top](#table-of-contents)
 
 ---
 
@@ -499,8 +602,7 @@ This is the result:
 
 Make sure to move your text to the right position first before adding a gradient to it.
 
-[Download](https://github.com/TypesettingTools/lyger-Aegisub-Scripts/blob/master/macros/lyger.GradientEverything.moon)
-(Needs [DependencyControl](https://github.com/TypesettingTools/DependencyControl) and [LibLyger](https://github.com/TypesettingTools/lyger-Aegisub-Scripts/blob/master/modules/LibLyger.moon))
+[Download](https://github.com/TypesettingTools/lyger-Aegisub-Scripts/blob/master/macros/lyger.GradientEverything.moon) | (Needs [DependencyControl](https://github.com/TypesettingTools/DependencyControl) and [LibLyger](https://github.com/TypesettingTools/lyger-Aegisub-Scripts/blob/master/modules/LibLyger.moon))
 
 ### Aegisub-Motion
 
@@ -518,10 +620,9 @@ Back to Aegisub and with your line(s) still selected, you use `Aegisub-Motion/Ap
 
 ![](./images/motion2.png)
 
-This will split out a lot of lines, usually one for each frame.
+This will spill out a lot of lines, usually one for each frame.
 
 
-[Download](https://github.com/TypesettingTools/Aegisub-Motion)
-(Needs [DependencyControl](https://github.com/TypesettingTools/DependencyControl))
+[Download](https://github.com/TypesettingTools/Aegisub-Motion) | (Needs [DependencyControl](https://github.com/TypesettingTools/DependencyControl))
 
 [top](#table-of-contents)

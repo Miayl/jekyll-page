@@ -10,6 +10,7 @@ description: Basics to timing & tips in Aegisub
 1. [Important buttons](#important-buttons)
 2. [Frame-based timing](#frame-based-timing)
 3. [Audio-based timing](#audio-based-timing)
+4. [Delete all timestamps at once](#delete-all-timestamps-at-once)
 4. [General tips](#general-tips)
 
 ---
@@ -78,12 +79,51 @@ A window opens where you can select the caption on screen and then the line is a
 - Set the start time with a *left click*
 - Set the end time with a *right click*
 - Play the audio of your timed line by pressing *S*
-- Play 500ms before your selection by pressing *Q* and 500ms after with *E*
+- Play 500ms before your selection by pressing *Q* and 500ms after with *E* to check if your selection was correct
 - Go to the next line by pressing *ENTER* or *G*
 
 [top](#table-of-contents)
 
---- 
+---
+
+## Delete all timestamps at once
+
+Imagine you have a bunch of timestamps like this but worse:
+
+![](./images/time1.png)
+
+Deleting timestamps one by one can be a hassle, but there's regex to the rescue!
+
+Go to *Subtitle* > *Select Lines...* and a window like this should open up:
+
+![](./images/time2.png)
+
+Set everything similar to the screenshot above and then click on *OK*. Voilà, all lines with timestamps should get selected:
+
+![](./images/time3.png)
+
+Now you can just hit *CTRL + DEL* and all timestamps are gone!
+
+**But how did it work?**
+
+As you can see, we set the mode to *Regular Expression match*, this basically means that we asked for all lines which match our pattern in the text field. Our pattern for timestamps is `^(\d+:?)*$`. To break it down into its components:
+
+- `^`: Match every line which starts with the following pattern
+
+
+- `\d+`: Match all numbers
+- `:?`:  Match the `:` symbol zero or one time
+- `*`: Match it zero ore more times
+
+So `(\d+:?))\*` means that we want to get all numbers with zero or one `:` symbol appended multiple times.
+
+- `$`: Match every line ending with the previous pattern
+
+If your timestamps use `.` instead of `:` (e.g. `01.55.55`, exchange the `:` in the pattern with `\.` We need the backslash because `.` on its own has a special meaning in regular expressions. [Regex101](https://regex101.com/) is a good website to test out if your regular expression works and how.
+
+[top](#table-of-contents)
+
+---
 
 ## General tips
 
@@ -92,6 +132,6 @@ A window opens where you can select the caption on screen and then the line is a
 
 ![](./images/continuous_timing.png)
 
-- If you have many lines, you can copy them all at once and paste them into the line grid
+- If you have many lines to time in your document with the translation, you can copy them all at once and paste them into the line grid
 
 [top](#table-of-contents)
