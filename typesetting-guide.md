@@ -4,7 +4,7 @@ title: Typesetting Guide
 description: Basics to typesetting in Aegsiub with examples
 ---
 
-[• Home](./) [• Timing Guide](./timing-guide.html)
+[• Home](./) [• Timing Guide](./timing-guide.html) [• Encoding Guide](./encoding-guide.html)
 
 *Last update 26.03.2021*
 

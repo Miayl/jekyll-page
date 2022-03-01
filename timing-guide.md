@@ -4,7 +4,7 @@ title: Timing Guide
 description: Basics to timing & tips in Aegisub
 ---
 
-[• Home](./) [• Typesetting Guide](./typesetting-guide.html)
+[• Home](./) [• Typesetting Guide](./typesetting-guide.html) [• Encoding Guide](./encoding-guide.html)
 
 ## Table of contents 
 1. [Important buttons](#important-buttons)
