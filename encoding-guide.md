@@ -23,17 +23,21 @@ Quality vs encoding time vs file size
 Depending on what you value the most, your encoding settings will change. You will come across following settings across all encoding programs:
 
 **Video encoder**
+
 H.264 is the most used standard while H.265 (HEVC) is its successor which offers the same quality as H.264 while producing smaller files at the cost of the encoding time. It doesn't matter what you use but if you prefer smaller files and don't care much about the encoding time, then I can recommend H.265 to you.
 
 You can also use your graphic cards for encoding instead of using your cpu for encoding. As of now though, to achieve the same quality as with cpu encoding, you have to choose a really high bitrate which also results in a really big file but it also encodes much faster which is really useful for streaming. But in our use case it's better to stick with cpu encoding.
 
 **Quality**
+
 You can either use CRF (constant rate factor) or bitrate for encoding. For CRF, small values result in good quality but big files while for bitrates it is big values. CRF is usually easier to use than bitrate as it automatically sets the bitrate for you.
 
 *CRF*
+
 CRF can range from 0 to 51. A good range for CRF is between 18 and 28. 23 is usually the standard value, so play around with it to see how it fits your needs.
 
 *Bitrate*
+
 For bitrate, choosing a good value can be a bit more complicated as it depends on what the target resolution is of your video (and often where you upload it to). For example these are the recommended bitrates for YouTube:
 
 ![](./images/encoding/youtube.png)
